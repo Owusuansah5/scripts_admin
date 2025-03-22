@@ -5,6 +5,10 @@
 sudo useradd -m -s /bin/bash newuser
 sudo echo "newuser:password" | chpasswd
 sudo groupadd Jenkins
+
+## add newuser to the group
+usermod newuser -G jenkins
+
 ##Set up SSH key-based authentication
 
 sudo mkdir -p /home/newuser/.ssh
